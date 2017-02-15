@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="css/iconfont.css" />
+<link rel="stylesheet" href="css/iconfont_xianshi.css" />
+<link rel="stylesheet" href="css/mui.css"  />
+<link rel="stylesheet" href="css/clear.css" />
+<link rel="stylesheet" href="css/index.css" />
+
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="./js/common.js"></script>
+
+<script src="./js/react.js"></script>
+<script src="./js/react-dom.js"></script>
+<script src="./js/browser.min.js"></script>
+
+<script>
+    //设置rem
+       setRem();
+       window.addEventListener("orientationchange", setRem);
+       window.addEventListener("resize", setRem);
+       function setRem() {
+           var html = document.querySelector("html");
+           var width = html.getBoundingClientRect().width;
+           html.style.fontSize = width / 15 + "px";
+       }
+
+</script>
+
+<script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div class="wrap wrapColor" id="content">
+</div>
+
+<script src="build/helloworld.js"></script>
+<script src="./js/mui.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,524 @@
+html,
+body {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  font-size: 0.52rem;
+  font-family: Helvetica,arial;
+}
+.checkIcon {
+  width: 1rem !important;
+  margin-top: -0.5rem;
+  position: absolute;
+  top: 50%;
+  right: 0.6rem;
+  color: #999999;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.wrap .title {
+  width: 100%;
+  height: 1.76rem;
+  border-bottom: solid 1px #b2b2b2;
+  position: relative;
+}
+.wrap .title .title_text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1.76rem;
+  font-size: 0.72rem;
+  text-align: center;
+  line-height: 1.76rem;
+  margin: 0;
+}
+.wrap .title .title_back {
+  width: 3rem;
+  height: 0.8rem;
+  position: absolute;
+  left: 0.3rem;
+  top: 0;
+  line-height: 1.76rem;
+}
+.wrap .title .title_back span {
+  float: left;
+  height: 1.76rem;
+  color: #ffffff;
+  line-height: 1.76rem;
+}
+.wrap .title .title_back a {
+  float: left;
+  height: 1.76rem;
+  font-size: 0.72rem;
+}
+.wrap .contentBox .jdTitle {
+  height: 1.6rem;
+  line-height: 1.6rem;
+  text-indent: 0.6rem;
+  font-size: 0.52rem;
+  color: #999999;
+}
+.wrap .contentBox .loginBox {
+  position: relative;
+  width: 100%;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  font-size: 0.6rem;
+}
+.wrap .contentBox .loginBox > label {
+  width: 4.2rem;
+  box-sizing: border-box;
+  height: 1.8rem;
+  padding: 0;
+  padding-left: 0.6rem;
+  font-size: 0.6rem;
+  line-height: 1.8rem;
+}
+.wrap .contentBox .loginBox > input {
+  width: 9.4rem;
+  height: 1.8rem;
+  line-height: 1rem;
+  box-sizing: border-box;
+  padding: 0.4rem 0!important;
+  font-size: 0.6rem;
+  float: left;
+}
+.wrap .contentBox .loginBox > span {
+  position: absolute;
+  right: 0.6rem;
+  top: 0;
+  bottom: 0;
+  color: #a2a2a2;
+}
+.wrap .contentBox .loginBox .mui-icon {
+  width: 0.72rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  text-align: center;
+  font-size: 0.6rem;
+}
+.wrap .contentBox .loginBox .icon-eye-close {
+  font-size: 0.6rem;
+}
+.wrap .contentBox .loginBox .icon-eye-open {
+  font-size: 0.72rem;
+}
+.wrap .contentBox .loginBox .mui-icon-forward {
+  font-size: 0.6rem;
+}
+.wrap .contentBox .loginBox .label_18 {
+  width: 2.6rem;
+}
+.wrap .contentBox .loginBox .input_82 {
+  width: 11rem;
+}
+.wrap .contentBox .loginBox .label_316 {
+  width: 4.76rem;
+}
+.wrap .contentBox .loginBox .input_684 {
+  width: 8.84rem;
+}
+.wrap .contentBox .loginBox .label_32 {
+  width: 4.74rem;
+}
+.wrap .contentBox .loginBox .input_68 {
+  width: 8.86rem;
+}
+.wrap .contentBox .loginBox .label_250 {
+  width: 5rem;
+}
+.wrap .contentBox .loginBox .input_500 {
+  width: 8.6rem;
+}
+.wrap .contentBox .loginBox .label_217 {
+  width: 4.34rem;
+}
+.wrap .contentBox .loginBox .input_463 {
+  width: 9.26rem;
+}
+/*公积金查询新增样式*/
+.wrap .contentBox .loginBox .label_280 {
+  width:5.6rem;
+}
+.wrap .contentBox .loginBox .input_400 {
+  width: 8rem;
+}
+/*公积金查询新增样式*/
+.wrap .contentBox .agreeBox p {
+  font-size: 0.6rem;
+  color: #999999;
+  text-indent: 0.6rem;
+  height: 1.88rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.8rem;
+}
+.wrap .contentBox .selectBtn {
+  width: 13.8rem;
+  margin: 0 auto;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.wrap .contentBox .selectBtn .selSubmitBtn {
+  width: 13.8rem;
+  height: 1.8rem;
+  border: none;
+  font-size: 0.72rem;
+  text-align: center;
+}
+.wrap .contentBox .qcbx_title {
+  border: solid 1px #e0e0e0;
+  background: #ffffff;
+  width: 15rem;
+}
+.wrap .contentBox .qcbx_title span {
+  float: left;
+  height: 1.8rem;
+  font-size: 0.6rem;
+  width: 50%;
+  line-height: 1.84rem;
+  text-align: center;
+}
+.wrap .contentBox .qcbx_title span a {
+  display: inline-block;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  color: #000000;
+}
+.wrap .contentBox .yhzxYan {
+  width: 100%;
+  font-size: 0.6rem;
+  text-align: center;
+  margin-top: 1.2rem;
+}
+.bankCardList .mui-table-view-cell:after{
+	background-color:transparent!important;
+}
+.wrap .contentBox .bankCardList li {
+  height: 1.8rem;
+  line-height: 1.8rem;
+  padding: 0;
+  padding-left: 0.6rem;
+  font-size:0.6rem;
+  border-bottom:solid 1px #e4e3e6;
+}
+.wrap .contentBox .bankCardList li:last-child{
+	border-bottom:none;
+}
+.wrap .contentBox .mui-icon-checkmarkempty {
+  font-size: 1rem !important;
+}
+/*弹出层样式*/
+.mask_box{
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.4);
+	position:fixed;
+	top:0;
+	left:0;
+}
+.mask_content {
+  width: 13.84rem;
+  height: 8.4rem;	
+  position: absolute;
+  left: 50%;
+  top: 5.08rem;
+  margin-left: -6.92rem;
+  background: #fff;
+  border-radius: 0.2rem;
+}
+.closeX {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 1rem;
+  color:#ccc;
+}
+.content_prop {
+  width: 13.84rem;
+  height: 8.4rem;
+  box-sizing:border-box;
+  padding: 0.8rem 0.88rem;
+  text-align: center;
+  color: #000;
+  line-height: 1;
+}
+.content_prop p {
+  font-size: 0.52rem;
+  color: #000!important;
+}
+.content_prop h3 {
+  margin-bottom:0;
+  font-weight: normal;
+  font-size: 0.72rem;
+  margin-top: 0.48rem;
+  color:#000;
+}
+.content_prop input {
+  margin-top:0.72rem;
+  box-sizing: border-box;
+  height: 1.84rem;
+  border: solid 1px #999999;
+  padding: 0.4rem;
+  line-height:1.04rem;
+  margin-bottom: 0.78rem;
+  border-radius:0;
+}
+.content_prop button {
+  width:100%;
+  height: 1.6rem;
+  color: #fff;
+  border-radius:3px;
+  border:none;
+  font-size:0.72rem;
+}
+.font_46 {
+  font-size: 0.92rem!important;
+}
+
+/*第二次页面*/
+.margin_20{
+	margin-top:0.4rem;
+}
+.margin_40{
+	margin-top:0.8rem;
+}
+.color_ccc{
+	color:red;
+}
+.color_999{
+	color:#999;
+}
+.text_center{
+	text-align:center;
+}
+.width_690{
+	width:13.8rem;
+	margin:0 auto;
+}
+.countNumText {
+  width: 5.64rem!important;
+  display:inline-block;
+}
+#countNumBtn {
+  display: inline-block;
+  width: 4.4rem;
+  height: 1.2rem;
+  box-sizing: border-box;
+  border: solid 1px #ccc;
+  font-size: 0.52rem;
+  text-align: center;
+  line-height: 1.15rem;
+  margin-top:0.3rem;
+  color:#000;
+  border-radius:5px;
+}
+.wrap .contentBox .loginBox .label_157 {
+  width: 3.16rem;
+}
+.wrap .contentBox .loginBox .input_463 {
+  width: 10.44rem;
+}
+.verify_remark{
+	margin-top:0.4rem;
+}
+.verify_remark p{
+	font-size:0.44rem;
+}
+.gouBox{
+	background:#fff;
+	height:7.6rem;
+	margin:0 auto;
+	padding-top:1.46rem;
+}
+.submit_remark{
+	margin-top:0.46rem;
+	margin-bottom:0.46rem;
+	font-size:0.44rem;
+    line-height: 0.64rem;
+    color:#999;
+}
+.gouBox_p{
+	text-align:center;
+	font-size:0.6rem;
+	color:#000;
+	line-height:1;
+	margin-bottom:0;
+}
+.checkgou{
+	width:2.4rem;
+	height:2.4rem;
+	margin:0 auto;
+}
+.checkgou span{
+	font-size:2.4rem;
+}
+.popApply_pRemark p{
+	margin-bottom:0;
+	font-size:0.6rem;
+	color:#666;
+	line-height:0.92rem;
+	text-align:center;
+}
+.popApply_pRemark p:nth-of-type(1){
+	margin-top:0.68rem;
+}
+.popApply_pRemark p:nth-of-type(3){
+	line-height:1.96rem;
+	font-size:0.72rem;
+	color:#000;
+}
+.popApply_button span{
+	width:6.6rem;
+	height:1.4rem;
+	line-height:1.4rem;
+	box-sizing:border-box;
+	font-size:0.6rem;
+	border-radius:5px;
+}
+.popApply_button span:nth-of-type(1){
+	float:left;
+}
+.popApply_button span:nth-of-type(2){
+	float:right;
+}
+.applyVerify_footer{
+	width:100%;
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+.applyVerify_footer a{
+	display:block;
+	line-height:1.8rem;
+	text-align:center;
+	font-size:0.72rem;
+	border-radius:5px;
+}
+.applyVerify_footer p{
+	margin-top:0.4rem;
+	margin-bottom:0.8rem;
+}
+.question_fixed_box{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:10;
+	width:100%;
+}
+.scrollBox{
+	width:100%;
+	height:100%; 
+	overflow:auto;
+	padding-top:3.88rem;
+}
+.fixed_time{
+	width:100%;
+	height:1.76rem;
+	background:#fff3b8;
+	font-size:0.52rem;
+	color:#f24130;
+	text-align:center;
+	line-height:1.8rem;
+	border-top:solid 1px #e0e0e0;
+	border-bottom:solid 1px #e0e0e0;
+}
+.scrollBox .mui-radio input[type=radio]{
+	left:0.6rem;
+	top:0.3rem;
+}
+.scrollBox .mui-radio input[type=radio]:before{
+	content: '\e411';
+	font-size:0.48rem;
+}
+.scrollBox form div{
+	min-height:1.6rem;
+	line-height:1.6rem;
+}
+.scrollBox form div>label{
+	padding-left:1.4rem!important;
+	color:#666;
+}
+.question_verify{
+	font-size:0.6rem;
+	min-height:2rem!important;
+	line-height:0.92rem!important;
+	padding: 0.54rem 0.6rem 0.4rem 0.6rem;
+	border-top:solid 1px #e0e0e0;
+	border-bottom:solid 1px #e0e0e0;
+}
+.wrap .scrollBox .selectBtn {
+  width: 13.8rem;
+  margin: 0 auto;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.wrap .scrollBox .selectBtn .selSubmitBtn {
+  width: 13.8rem;
+  height: 1.8rem;
+  border: none;
+  font-size: 0.72rem;
+  text-align: center;
+}
+.overtime{
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:12rem;
+	height:1.4rem;
+	transform:translate(-50%,-50%);
+	background:rgba(0,0,0,0.7);
+	border-radius:5px;
+	z-index:3;
+}
+.overtime_t{
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:12rem;
+	height:1.4rem;
+	transform:translate(-50%,-50%);
+	color:#fff;
+	font-size:0.6rem;
+	line-height:1.4rem;
+	text-align:center;
+	z-index:6;
+}
+/*报错样式*/
+.error_remark{
+	width:98%;
+	margin:0 auto;
+	margin-top:1.94rem;
+	text-align:center;
+}
+.error_remark .message{
+	display:inline-block;
+	min-height:1.4rem;
+	line-height:1.4rem;
+	background:#494949;
+	color:#fff;
+	font-size:0.6rem;
+	padding-left:1rem;
+	padding-right:1rem;
+	border-radius: 5px;
+}
+/*新增*/
+.lianNameRemark{
+	font-weight: normal;
+	font-size:0.6rem;
+	position:absolute;
+	left:0;
+	top:100%;
+	margin-top:-1px;
+	width:100%;
+	height:1.8rem;
+	background: #fef2b8;
+	color:#ff4347;
+	line-height: 1.8rem;
+	padding-left:1rem;
+}

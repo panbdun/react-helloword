@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>淘宝查询</title>
+	<link rel="stylesheet" href="css/iconfont.css" />
+	<link rel="stylesheet" href="css/iconfont_xianshi.css" />
+	<link rel="stylesheet" href="css/mui.css"  />
+	<link rel="stylesheet" href="css/clear.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+	    //设置rem
+        setRem();
+        window.addEventListener("orientationchange", setRem);
+        window.addEventListener("resize", setRem);
+        function setRem() {
+            var html = document.querySelector("html");
+            var width = html.getBoundingClientRect().width;
+            html.style.fontSize = width / 15 + "px";
+        }
+
+    </script>
+</head>
+<body>
+<div class="wrap wrapColor">
+	<section class="title title_bColor">
+		<h3 class="title_text title_tColo">淘宝查询</h3>
+		<p class="title_back clearfloat">
+			<span class="mui-icon mui-icon-back"></span>
+			<a class="title_tColo" href="#" ontouchend="javascript:history.back(-1)">返回</a>
+		</p>
+	</section>
+	<section class="mui-content contentBox mt_39">
+		<form class="mui-input-group userInfo">
+		    <div class="mui-input-row liH_90 loginBox clearCircle">
+		        <label class="label_18">账号</label>
+		    	<input type="text" class="mui-input-clear input_82" placeholder="邮箱/用户名/手机号">
+		    </div>
+		    <div class="mui-input-row liH_90 loginBox">
+		        <label class="label_18">密码</label>
+		        <input type="password"  placeholder="密码" class="password input_82">
+			<span class="mui-icon iconfont icon-eye-close password"></span>
+		    </div>
+		</form>
+		<div class="agreeBox">
+			<p>我已阅读并同意<a class="agreeText_col" href="taobao_agreement.html">《淘宝授权协议》</a></p>
+		</div>
+		<div class="selectBtn liH_90">
+			<input type="submit" value="查询" class="selectBtn_bCol selSubmitBtn"/>
+		</div>
+	</section>
+</div>
+<script src="js/mui.js"></script>
+</body>
+</html>
