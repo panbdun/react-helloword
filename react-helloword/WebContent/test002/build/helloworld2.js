@@ -37,7 +37,7 @@ var Agree = React.createClass({
 				"\u6211\u5DF2\u9605\u8BFB\u5E76\u540C\u610F",
 				React.createElement(
 					"a",
-					{ className: "agreeText_col", href: "taobao_agreement.html" },
+					{ className: "agreeText_col", href: "http://www.baidu.com" },
 					"\u300A\u6DD8\u5B9D\u6388\u6743\u534F\u8BAE\u300B"
 				)
 			)
@@ -57,46 +57,60 @@ var SelectBtn = React.createClass({
 	}
 });
 
+var Input = React.createClass({
+	displayName: "Input",
+
+	getInput: function () {
+		return React.createElement(
+			"div",
+			{ className: "mui-input-row liH_90 loginBox clearCircle" },
+			React.createElement(
+				"label",
+				{ className: "label_18" },
+				this.props.label
+			),
+			React.createElement("input", { type: this.props.elementType, className: "password input_82", placeholder: this.props.placeholder }),
+			React.createElement("span", { className: this.props.elementType == 'text' ? 'mui-icon iconfont icon-eye-close password dis_none' : 'mui-icon iconfont icon-eye-close password ' })
+		);
+	},
+	render: function () {
+		return this.getInput();
+	}
+});
+
+let inputEleData = { "elements": [] };
 var Form = React.createClass({
 	displayName: "Form",
 
 	getInitialState: function () {
+		console.log('getInitialState');
 		return { data: [] };
 	},
 	componentDidMount: function () {
 		//this.loadCommentsFromServer();
 		//setInterval(this.loadCommentsFromServer, this.props.pollInterval);
 		console.log('componentDidMount');
+		$.each($("form :input"), function (index, input) {
+			console.log(input.type + input.value + input.placeholder);
+		});
 	},
 	handleSubmit: function (e) {
 		//e.preventDefault();
 		console.log('handleSubmit');
+		return false;
 	},
 	render: function () {
+		console.log('render before');
+
+		inputEleData = { "elements": [{ "lable": "账号", "name": "username", "elementType": "text", "placeHolder": "公积金账号", "checkEmpty": "true", "checkMoble": "false", "checkLength": "false", "checkEmail": "false", "checkIdCard": "false", "checkNumber": "false", "onHasKeyShowInfo": "" }, { "lable": "密码", "name": "password", "elementType": "password", "placeHolder": "密码", "checkEmpty": "true", "checkMoble": "false", "checkLength": "false", "checkEmail": "false", "checkIdCard": "false", "checkNumber": "false", "onHasKeyShowInfo": "" }, { "lable": "身份证", "name": "otherInfo", "elementType": "text", "placeHolder": "身份证", "checkEmpty": "true", "checkMoble": "false", "checkLength": "false", "checkEmail": "false", "checkIdCard": "false", "checkNumber": "false", "onHasKeyShowInfo": "" }] };
+
+		let inputItems = inputEleData.elements.map(function (ele, index) {
+			return React.createElement(Input, { key: index, label: ele.lable, elementType: ele.elementType, placeholder: ele.placeHolder });
+		});
 		return React.createElement(
 			"form",
 			{ className: "mui-input-group userInfo", onSubmit: this.handleSubmit },
-			React.createElement(
-				"div",
-				{ className: "mui-input-row liH_90 loginBox clearCircle" },
-				React.createElement(
-					"label",
-					{ className: "label_18" },
-					"\u8D26\u53F7"
-				),
-				React.createElement("input", { type: "text", className: "mui-input-clear input_82", placeholder: "\u90AE\u7BB1/\u7528\u6237\u540D/\u624B\u673A\u53F7" })
-			),
-			React.createElement(
-				"div",
-				{ className: "mui-input-row liH_90 loginBox" },
-				React.createElement(
-					"label",
-					{ className: "label_18" },
-					"\u5BC6\u7801"
-				),
-				React.createElement("input", { type: "password", placeholder: "\u5BC6\u7801", className: "password input_82" }),
-				React.createElement("span", { className: "mui-icon iconfont icon-eye-close password" })
-			),
+			inputItems,
 			React.createElement(Agree, null),
 			React.createElement(SelectBtn, null)
 		);
@@ -108,7 +122,7 @@ var FormBox = React.createClass({
 
 	render: function () {
 		return React.createElement(
-			"div",
+			"section",
 			{ className: "mui-content contentBox mt_39" },
 			React.createElement(Header, null),
 			React.createElement(Form, null)
