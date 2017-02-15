@@ -16,7 +16,7 @@ var Agree =  React.createClass({
 	render: function() {
 		return(
 			<div className="agreeBox">
-				<p>我已阅读并同意<a className="agreeText_col" href="taobao_agreement.html">《淘宝授权协议》</a></p>
+				<p>我已阅读并同意<a className="agreeText_col" href="http://www.baidu.com">《淘宝授权协议》</a></p>
 			</div>
 		);
 	}
@@ -32,32 +32,55 @@ var SelectBtn =  React.createClass({
 	}
 });
 
+var Input = React.createClass({
+	getInput: function(){
+		return (
+			<div className="mui-input-row liH_90 loginBox clearCircle">
+				<label className="label_18">{this.props.label}</label>
+				<input type={this.props.elementType} className="password input_82" placeholder={this.props.placeholder} />
+				<span className={ this.props.elementType=='text' ? 'mui-icon iconfont icon-eye-close password dis_none' : 'mui-icon iconfont icon-eye-close password ' }  ></span>
+			</div>
+		)
+	},
+	render: function() {
+		return (
+			this.getInput()
+		)
+	}
+});
+
+let inputEleData = {"elements":[]};
 var Form =  React.createClass({
 	getInitialState: function() {
+		console.log('getInitialState');
 		return {data: []};
 	},
 	componentDidMount: function() {
 	    //this.loadCommentsFromServer();
 	    //setInterval(this.loadCommentsFromServer, this.props.pollInterval);
 		console.log('componentDidMount');
+		$.each($("form :input"),function(index,input){
+			console.log(input.type + input.value + input.placeholder);
+		});
 	},
 	handleSubmit: function(e) {
 		//e.preventDefault();
 		console.log('handleSubmit');
+		return false;
 	},
 	render: function() {
+		console.log('render before');
+		
+		inputEleData = {"elements":[{"lable":"账号","name":"username","elementType":"text","placeHolder":"公积金账号","checkEmpty":"true","checkMoble":"false","checkLength":"false","checkEmail":"false","checkIdCard":"false","checkNumber":"false","onHasKeyShowInfo":""},{"lable":"密码","name":"password","elementType":"password","placeHolder":"密码","checkEmpty":"true","checkMoble":"false","checkLength":"false","checkEmail":"false","checkIdCard":"false","checkNumber":"false","onHasKeyShowInfo":""},{"lable":"身份证","name":"otherInfo","elementType":"text","placeHolder":"身份证","checkEmpty":"true","checkMoble":"false","checkLength":"false","checkEmail":"false","checkIdCard":"false","checkNumber":"false","onHasKeyShowInfo":""}]};
+		
+		let inputItems = inputEleData.elements.map(function (ele,index){
+			return (
+				<Input key={index} label={ele.lable} elementType={ele.elementType} placeholder={ele.placeHolder}/>
+			)
+		});
 		return(
-			<form className="mui-input-group userInfo" onSubmit={this.handleSubmit}>
-			    <div className="mui-input-row liH_90 loginBox clearCircle">
-			        <label className="label_18">账号</label>
-			    	<input type="text" className="mui-input-clear input_82" placeholder="邮箱/用户名/手机号" />
-			    </div>
-			    <div className="mui-input-row liH_90 loginBox">
-			        <label className="label_18">密码</label>
-			        <input type="password"  placeholder="密码" className="password input_82" />
-			        <span className="mui-icon iconfont icon-eye-close password"></span>
-			    </div>
-			    
+			<form className="mui-input-group userInfo" onSubmit={this.handleSubmit} >
+				{inputItems}
 			    <Agree />
 				<SelectBtn />
 			</form>
@@ -68,10 +91,10 @@ var Form =  React.createClass({
 var FormBox = React.createClass({
 	render: function() {
 		return (
-			<div className="mui-content contentBox mt_39">
+			<section className="mui-content contentBox mt_39">
 				<Header />
 				<Form />
-			</div>
+			</section>
 		);
 	}
 });

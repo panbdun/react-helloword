@@ -522,3 +522,6 @@ body {
 	line-height: 1.8rem;
 	padding-left:1rem;
 }
+.dis_none{
+	display: none;
+}
