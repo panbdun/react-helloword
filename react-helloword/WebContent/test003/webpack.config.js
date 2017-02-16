@@ -65,6 +65,12 @@ module.exports = {
             threshold: 10240,
             minRatio: 0.8
         }),
+        new webpack.DefinePlugin({
+			'process.env': {
+				//注意一个单引号一个双引号…… 这里是要将 "production" 替换到文件里面
+				NODE_ENV: '"production"'
+			}
+		}),
     ],
     
     externals: {
