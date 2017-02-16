@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDom from 'react-dom';
+
 
 var Header = React.createClass({
   render: function() {
@@ -101,7 +104,7 @@ var FormBox = React.createClass({
 });
 
 
-ReactDOM.render(
+ReactDom.render(
   <FormBox />,
   document.getElementById('content')
 );

@@ -1,0 +1,121 @@
+/**
+  title_bColor : title标题栏背景颜色 
+  title_tColo  ：title标题栏文字颜色
+  wrapColor      : 内容背景颜色
+  agreeText_col  : 协议链接颜色
+  selectBtn_bCol ：登录查询按钮颜色
+  qcbx_tab_active : 汽车保险查询里的tab切换下划线样式 
+  .wrap .contentBox :加固背景颜色
+  agreeText_col_border :边框线颜色设置
+ **/
+*{
+	margin:0;
+	padding:0;
+	/*-webkit-user-select: none;
+	-ms-user-select:none;*/
+  font-family: Helvetica,arial;
+}
+a,input,button,label {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input,button {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust:100%;
+}
+a {
+  text-decoration: none;
+}
+a:active,a:hover{
+	outline:0
+}
+ul,li,ol{
+    list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h3{
+	font-weight:normal;
+}
+/****************初始化结束***********/
+/************公用样式类*****start*********/
+.mt_39{
+	padding-top: 0.78rem;
+}
+.mt_20 {
+  padding-top: 0.4rem;
+}
+.liH_90 {
+  height: 1.8rem;
+}
+.mr_12{
+    margin-right:0.24rem;
+}
+.clearfloat:after{
+	display:block;
+	clear:both;
+	content:"";
+	visibility:hidden;
+	height:0;
+}
+.loginBox input::-webkit-input-placeholder {
+　　font-size:0.6rem;
+	 color:#cccccc;
+}
+.loginBox input:-moz-input-placeholder {
+　　font-size:0.6rem;
+	 color:#cccccc;
+}
+.loginBox input::-moz-input-placeholder {
+　　font-size:0.6rem;
+	 color:#cccccc;
+}
+.loginBox input:-ms-input-placeholder {
+　　font-size:0.6rem;
+	 color:#cccccc;
+}
+.icon-eye-close,.icon-eye-open{
+	color:#999999!important;
+}
+/************公用样式类*****over*********/
+
+/*查询颜色设置  */
+.title_bColor{             
+	background: #3071f2!important;
+}
+.title_tColo{
+	color:#ffffff;
+}
+.wrapColor{
+	background:#f5f5f5;
+}
+.wrap .contentBox {
+  width: 100%;
+  background:#f5f5f5; /* 颜色设置和wrapColor保持一致*/
+}
+.agreeText_col{
+	color:#3071f2!important;
+}
+.selectBtn_bCol{
+	background:#39b31b !important;
+}
+.qcbx_tab_active{
+	border-bottom: solid 0.08rem #3071f2 !important;
+	color:#3071f2!important;
+}
+/*第二次新加的*/
+.agreeText_col_border{
+	border:solid 1px #3071f2;
+}
+.scrollBox .mui-radio input[type=radio]:checked:before{
+	content: '\e441';
+	font-size:0.48rem;
+	color:#3071f2;
+}
+.icon-chenggong{
+	color:#39b31b;
+}

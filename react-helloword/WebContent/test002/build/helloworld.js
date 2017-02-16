@@ -1,3 +1,5 @@
+import Input from './input';
+
 var Header = React.createClass({
 	displayName: "Header",
 
@@ -54,27 +56,6 @@ var SelectBtn = React.createClass({
 			{ className: "selectBtn liH_90" },
 			React.createElement("input", { type: "submit", value: "\u67E5\u8BE2", className: "selectBtn_bCol selSubmitBtn" })
 		);
-	}
-});
-
-var Input = React.createClass({
-	displayName: "Input",
-
-	getInput: function () {
-		return React.createElement(
-			"div",
-			{ className: "mui-input-row liH_90 loginBox clearCircle" },
-			React.createElement(
-				"label",
-				{ className: "label_18" },
-				this.props.label
-			),
-			React.createElement("input", { type: this.props.elementType, className: "password input_82", placeholder: this.props.placeholder }),
-			React.createElement("span", { className: this.props.elementType == 'text' ? 'mui-icon iconfont icon-eye-close password dis_none' : 'mui-icon iconfont icon-eye-close password ' })
-		);
-	},
-	render: function () {
-		return this.getInput();
 	}
 });
 
